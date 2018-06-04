@@ -5,7 +5,11 @@ import LoginForm from './LoginForm';
 import Typing from 'react-typing-animation';
 import ChatContainer from './ChatContainer';
 
+<<<<<<< HEAD
 const socketUrl = process.env.SOCKET_URL || '/';
+=======
+const socketUrl = '/'; //new socket
+>>>>>>> a49854c56854f595ea672ef8a69cad77f2ee05a9
 export default class Layout extends Component {
 	constructor(props) {
 		super(props);
