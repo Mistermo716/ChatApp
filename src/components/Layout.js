@@ -5,7 +5,7 @@ import LoginForm from './LoginForm';
 import Typing from 'react-typing-animation';
 import ChatContainer from './ChatContainer';
 
-const socketUrl = 'http://192.168.1.7:3231' || 'https://secure-forest-80226.herokuapp.com/';
+const socketUrl = process.env.SOCKET_URL || 'http://192.168.1.7:3231';
 export default class Layout extends Component {
 	constructor(props) {
 		super(props);
