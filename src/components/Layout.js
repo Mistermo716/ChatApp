@@ -18,7 +18,8 @@ export default class Layout extends Component {
 		this.initSocket();
 	}
 
-	//Connect and intializes the socket
+	//Connect and intializes the socket s
+	
 
 	initSocket = () => {
 		const socket = io(socketUrl);
