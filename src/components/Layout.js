@@ -5,7 +5,6 @@ import LoginForm from './LoginForm';
 import Typing from 'react-typing-animation';
 import ChatContainer from './ChatContainer';
 
-const socketUrl = '/';
 export default class Layout extends Component {
 	constructor(props) {
 		super(props);
@@ -21,7 +20,7 @@ export default class Layout extends Component {
 	//Connect and intializes the socket s
 
 	initSocket = () => {
-		const socket = io(socketUrl);
+		const socket = io.connect();
 		socket.on('connect', () => {
 			if (this.state.user) {
 				this.reconnect(socket);

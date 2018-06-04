@@ -4,7 +4,7 @@ const server = require('http').Server(app);
 const cors = require('cors');
 const io = (module.exports.io = require('socket.io')(server));
 
-const PORT = 80;
+const PORT = process.env.PORT;
 
 const SocketManager = require('./SocketManager');
 
