@@ -5,7 +5,7 @@ import LoginForm from './LoginForm';
 import Typing from 'react-typing-animation';
 import ChatContainer from './ChatContainer';
 
-const socketUrl = 'http://192.168.1.7:3231';
+const socketUrl = 'http://http://secure-forest-80226.herokuapp.com/:3231';
 export default class Layout extends Component {
 	constructor(props) {
 		super(props);
@@ -19,7 +19,6 @@ export default class Layout extends Component {
 	}
 
 	//Connect and intializes the socket s
-	
 
 	initSocket = () => {
 		const socket = io(socketUrl);
