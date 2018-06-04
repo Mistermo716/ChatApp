@@ -6,8 +6,6 @@ const io = (module.exports.io = require('socket.io')(server));
 
 const PORT = process.env.PORT || 3231;
 const SocketManager = require('./SocketManager');
-// define the folder that will be used for static assets
-app.use(express.static(path.join(__dirname, '../../build')));
 
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
