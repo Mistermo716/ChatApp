@@ -5,7 +5,7 @@ import LoginForm from './LoginForm';
 import Typing from 'react-typing-animation';
 import ChatContainer from './ChatContainer';
 
-const socketUrl = 'http://localhost:3231';
+const socketUrl = io.connect('http://localhost:3231');
 export default class Layout extends Component {
 	constructor(props) {
 		super(props);
