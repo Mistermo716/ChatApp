@@ -1,8 +1,11 @@
+var http = require('http');
+var express = require('express'),
+	app = (module.exports.app = express());
 
-const app = require('http').createServer();
-const io = (module.exports.io = require('socket.io')(app));
-
+var server = http.createServer(app);
+var io = require('socket.io').listen(server); //pass a http.Server instance
 const PORT = process.env.PORT || 3231;
+server.listen(PORT); //listen on port 80
 const SocketManager = require('./SocketManager');
 
 io.on('connection', SocketManager);
