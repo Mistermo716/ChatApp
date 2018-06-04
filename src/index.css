@@ -6,6 +6,19 @@ body,
 	font-family: sans-serif;
 	height: 100%;
 }
+.thread {
+	background-color: white;
+}
+label {
+	color: black;
+}
+.typed {
+	background-color: white;
+	color: black;
+	font-family: lato;
+	font-size: 25px;
+	margin-bottom: 40px;
+}
 input,
 textarea {
 	font-family: Arial;
@@ -30,11 +43,11 @@ textarea {
 	height: 20px;
 	line-height: 20px;
 	font-size: 20px;
-	border-bottom: solid 2px #b3b2ca;
+	border-bottom: solid 2px #080808;
 	transition: all .23s ease-in;
 }
 .login-form input:focus {
-	border-bottom: solid 2px #5d5d8a;
+	border-bottom: solid 2px #1b1b1b;
 	outline: none;
 }
 .login-form .error {
@@ -44,7 +57,7 @@ textarea {
 	color: #c92c43;
 }
 .container {
-	color: #cac8ee;
+	color: whitesmoke;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
@@ -53,7 +66,7 @@ textarea {
 }
 #side-bar {
 	box-sizing: border-box;
-	width: 33.75%;
+	width: 30%;
 	height: 100%;
 	display: flex;
 	justify-content: space-around;
@@ -68,10 +81,11 @@ textarea {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	background: #2e2e4f;
+	background: rgba(0, 0, 0, .8);
 }
 #side-bar .search {
-	background: #3e3e5e;
+	color: black;
+	background: #ffffff;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
@@ -79,7 +93,7 @@ textarea {
 	align-items: center;
 	border-width: 1px 0;
 	border-style: solid;
-	border-color: black;
+	border-color: #1b1b1b;
 	padding-left: 15px;
 	padding-right: 20px;
 	height: 10vh;
@@ -88,20 +102,21 @@ textarea {
 #side-bar .search .search-icon {
 	margin-right: 15px;
 	cursor: pointer;
+	color: rgba(225, 225, 225, 0.7);
 }
 #side-bar .search input {
 	width: 100%;
-	background: #3e3e5e;
+	background: #ffffff;
 	flex-grow: 1;
 	box-sizing: border-box;
 	border: none;
-	color: #cac8ee;
+	color: black;
 }
 #side-bar .search input:focus {
 	outline: none;
 }
 #side-bar .search input::placeholder {
-	color: #cac8ee;
+	color: #cccccc;
 	opacity: .6;
 }
 #side-bar .search .plus {
@@ -115,7 +130,7 @@ textarea {
 #side-bar .search .plus::before {
 	content: '';
 	position: absolute;
-	background: #b3b2ca;
+	background: #2a2a2c;
 }
 #side-bar .search .plus::after {
 	width: 16px;
@@ -130,19 +145,18 @@ textarea {
 }
 #side-bar .users {
 	overflow-y: scroll;
-	background: #3e3e5e;
+	background: #202024ec;
 	flex-grow: 1;
 }
 #side-bar .users::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	background-color: #cac8ee;
+	background-color: #201e1e;
 }
 #side-bar .users::-webkit-scrollbar {
 	width: 5px;
-	background-color: green;
 }
 #side-bar .users::-webkit-scrollbar-thumb {
-	background-color: #484d79;
+	background-color: rgba(0, 0, 0, .8);
 }
 #side-bar .users .user {
 	align-items: center;
@@ -153,7 +167,7 @@ textarea {
 }
 #side-bar .users .user.active,
 #side-bar .users .user:hover {
-	background: #2e2e4f;
+	background: #1d1c1d;
 }
 #side-bar .users .user:hover:not(.active) {
 	cursor: pointer;
@@ -174,7 +188,7 @@ textarea {
 }
 #side-bar .current-user {
 	align-items: center;
-	background: #484d79;
+	background: #1d1c1d;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
@@ -192,7 +206,7 @@ textarea {
 	font-size: 2em;
 }
 .chat-header {
-	background: #5d5d8a;
+	background: #313134;
 	box-shadow: 0px 6px 5px -2px rgba(225, 225, 225, 0.7);
 	box-sizing: border-box;
 	display: flex;
@@ -250,20 +264,24 @@ textarea {
 	font-size: 2em;
 }
 .thread-container {
+	background-color: rgba(225, 225, 225, 0.7);
 	flex-grow: 1;
 	overflow-y: scroll;
 	position: relative;
 }
+.current-user {
+	background-color: black;
+}
 .thread-container::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	background-color: #cac8ee;
+	background-color: rgba(0, 0, 0, .8);
 }
 .thread-container::-webkit-scrollbar {
 	width: 5px;
-	background-color: green;
+	background-color: grey;
 }
 .thread-container::-webkit-scrollbar-thumb {
-	background-color: #484d79;
+	background-color: rgba(0, 0, 0, .8);
 }
 .thread-container .thread {
 	position: relative;
@@ -272,9 +290,14 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	color: #b3b2ca;
-	background: #dcddf5;
+	background: rgb(240, 234, 234);
 }
+.welcome {
+	text-align: center;
+	position: relative;
+	top: 45%;
+}
+
 .message-container {
 	display: flex;
 	justify-content: flex-start;
@@ -283,6 +306,7 @@ textarea {
 	animation: .65s ease-out 0s show;
 }
 .message-container .time {
+	color: black;
 	order: 1;
 }
 .message-container .data {
@@ -291,6 +315,7 @@ textarea {
 	margin-left: 25px;
 }
 .message-container .name {
+	color: black;
 	font-size: .65em;
 	margin-top: 5px;
 	text-align: right;
@@ -300,7 +325,7 @@ textarea {
 	border-radius: 5px;
 	border-top-left-radius: 0;
 	box-sizing: border-box;
-	color: #b3b2ca;
+	color: black;
 	height: 100%;
 	padding: 10px 15px;
 	position: relative;
@@ -343,25 +368,26 @@ textarea {
 	display: none;
 }
 .message-container.right .message {
-	background: #89a1fc;
+	background: rgba(0, 0, 0, .8);
 	color: #fff;
 	border-top-right-radius: 0;
 	border-top-left-radius: 5px;
 }
 .message-container.right .message::before {
-	border-top-color: #89a1fc;
-	border-left-color: #89a1fc;
+	border-top-color: rgba(0, 0, 0, .8);
+	border-left-color: rgba(0, 0, 0, .8);
 	border-right-color: transparent;
 	left: auto;
 	right: -7px;
 }
 .typing-user {
+	color: black;
 	text-align: right;
 	margin: 10px 15px;
 }
 .message-input {
-	background: white;
-	color: #484d79;
+	background: rgb(0, 0, 0);
+	color: rgb(0, 0, 0);
 	box-sizing: border-box;
 	height: 10vh;
 	max-height: 65px;
@@ -384,17 +410,19 @@ textarea {
 }
 .message-input .message-form .form-control::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	background-color: #cac8ee;
+	background-color: rgba(0, 0, 0, 0.616);
 }
 .message-input .message-form .form-control::-webkit-scrollbar {
 	width: 5px;
-	background-color: green;
 }
 .message-input .message-form .form-control::-webkit-scrollbar-thumb {
-	background-color: #484d79;
+	background-color: rgba(0, 0, 0, .8);
 }
 .message-input .message-form .form-control:focus {
 	outline: none;
+}
+.send {
+	background-color: #1d1c1d;
 }
 .message-input .message-form .send {
 	width: 20%;
@@ -404,11 +432,9 @@ textarea {
 	border: none;
 	height: 100%;
 	color: #fff;
-	background: #3e3e5e;
 	transition: all .35s ease-out;
 }
 .message-input .message-form .send:disabled {
-	opacity: .2;
-	background: #5d5d8a;
+	opacity: .7;
 }
 /*# sourceMappingURL=index.css.map */

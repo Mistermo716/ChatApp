@@ -23,12 +23,7 @@ export default class SideBar extends Component {
 		return (
 			<div id="side-bar">
 				<div className="heading">
-					<div className="app-name">
-						React Chat <FAChevronDown />
-					</div>
-					<div className="menu">
-						<FAMenu />
-					</div>
+					<div className="app-name">Socket Chat</div>
 				</div>
 				<form onSubmit={this.handleSubmit} className="search">
 					<i className="search-icon">
@@ -38,10 +33,9 @@ export default class SideBar extends Component {
 						onChange={e => {
 							this.setState({ reciever: e.target.value });
 						}}
-						placeholder="Search"
+						placeholder="Search Username"
 						type="text"
 					/>
-					<div className="plus" />
 				</form>
 				<div
 					className="users"
