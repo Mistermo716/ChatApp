@@ -1,6 +1,7 @@
+const http = require('http');
 const express = require('express');
 const app = express();
-const server = require('http').Server(app);
+const server = http.createServer(app);
 const io = (module.exports.io = require('socket.io')(app));
 
 const PORT = process.env.PORT || 3231;
